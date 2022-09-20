@@ -185,8 +185,12 @@ img {
   color: var(--clr-primary-3);
 }
 
-.button:hover {
-  background-color: grey;
+button:hover {
+  background-color: rgb(206, 199, 199);
+}
+
+button:active {
+  font-size: 97%;
 }
 
 @media screen and (max-width: 1050px) {
