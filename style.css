@@ -114,7 +114,10 @@ img {
 
     padding-top: .5em;
     padding-bottom: .5em;
-    font-size: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    font-size: 1.3em;
 
     text-align: center;
 }
@@ -126,6 +129,7 @@ img {
     
     padding-left: 1em;
     padding-right: 1em;
+    padding-bottom: 1em;
 
     text-align: center;
 
