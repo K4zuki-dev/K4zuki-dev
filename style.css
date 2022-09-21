@@ -210,12 +210,6 @@ h1:hover {
   cursor: pointer;
 }
 
-.image-ntf:hover {
-  
-  mix-blend-mode: overlay;
-  cursor: pointer;
-}
-
 hr {
   width: 85%;
   height: 1px;
@@ -247,15 +241,17 @@ hr {
   opacity: 0%;
   border-radius: 1em;
 
-  top: 14.5em;
+  top: 14.1em;
   
   transition: .5s;
 }
 
 .overlay:hover {
   opacity: 40%;
+  cursor: pointer;
 }
 
 .overlay:hover .icon-view{
   opacity: 1;
+  cursor: pointer;
 }
