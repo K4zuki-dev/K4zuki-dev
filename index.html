@@ -6,11 +6,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | QR code component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -19,15 +19,28 @@
   </style>
 </head>
 <body>
+  <main class="product">
 
-  <main>
-    <div id="box">
+    <section class="product-img">
+     <img class="product-img-image" src="/images/image-product-desktop.jpg" alt="product-perfume">
+     <img class="product-img-image-mobile" src="/images/image-product-mobile.jpg" alt="product-perfume-mobile">
+    </section>
+    <section class="product-text">
 
-      <img src="./images/image-qr-code.png" alt="qr-code" id="img">
+      <h2 class="perfume">P E R F U M E</h2>
 
-      <h1 class="big">Improve your front-end skills by building projects</h1>
-      <p class="small">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level </p>
-    </div>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p class="product-text-paragraph">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+    
+    <section class="section-price">  
+      <h2 class="price">$149.99</h2>
+      <p class="dashed">$169.99</p>
+    </section>
+    <section class="section-shoppingcart">
+      <button type="button" class="buy"><img class="image-shoppingcart" src="/images/icon-cart.svg" alt="shopping-cart">Add to Cart</button>
+    </section>
+    </section>
   </main>
 </body>
 </html>
