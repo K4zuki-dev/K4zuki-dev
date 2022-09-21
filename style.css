@@ -1,15 +1,15 @@
 :root {
-    --clr-main-font: hsl(218, 44%, 22%);
-    --clr-background: hsl(212, 45%, 89%);
-    --clr-text: hsl(220, 15%, 55%);
-    --clr-qr-background: hsl(0, 0%, 100%);
+  --ff-main:  'Outfit', sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
 
-    --fs-main: 0.9375rem;
-
-    --ff-main: 'Outfit', sans-serif;
-
-    --fw-big: 700;
-    --fw-small: 400;
+  --clr-background: hsl(217, 54%, 11%);
+  --clr-ntf-background: hsl(216, 50%, 16%);
+  --clr-text-eth: hsl(178, 100%, 50%);
+  --clr-accent: hsl(0, 0%, 100%);
+  --clr-text: hsl(215, 51%, 70%);
+  --clr-line: hsl(215, 32%, 27%);
 }
 
 /* Box sizing rules */
@@ -20,7 +20,16 @@
 }
 
 /* Remove default margin */
-* {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
@@ -79,59 +88,174 @@ select {
 }
 
 body {
-    background-color: var(--clr-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--clr-background);
 }
 
-img {
-    border: 0 solid;
-    border-radius: 1em;
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 20em;
+  max-height: 50em;
+
+  border: 0px solid black;
+  background-color: var(--clr-ntf-background);
+
+  border-radius: .75em;
 }
 
-#box {
-    width: 20em;
+.image-ntf {
+  border: 0px solid;
+  border-radius: 1em;
+  margin: 1em;
+  overflow: hidden;
+}
 
-    border: 1px solid;
-    background-color: var(--clr-qr-background);
+.section-text {
+  text-align: left;
+  padding-right: 1em;
+  padding-left: 1.5em;
+  color: var(--clr-text);
+}
 
-    padding: 1em;
-    border-radius: 1em;
-    border-color: var(--clr-qr-background);
+h1 {
+  color: var(--clr-accent);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-600);
+  font-size: 1.3em;
+}
+
+.section-price {
+  display: flex;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 
 }
 
-.big {
-    font-family: var(--ff-main);
-    font-weight: var(--fw-big);
-    color: var(--clr-main-font);
+.p-ETH {
+  color: var(--clr-text-eth);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-600);
 
-    padding-top: .5em;
-    padding-bottom: .5em;
-    padding-left: 1em;
-    padding-right: 1em;
-
-    font-size: 1.3em;
-
-    text-align: center;
+  display: flex;
+  align-items: center;
+  gap: .5em;
 }
 
-.small {
-    font-family: var(--ff-main);
-    font-weight: var(--fw-small);
-    color: var(--clr-text);
-    
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-
-    text-align: center;
-
-    font-size: var(--fs-main);
+section > p {
+  padding-top: 1em;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-400);
 }
 
-body {
-    overflow: hidden;
+.p-TIME {
+  color: var(--clr-text);
+
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.span-name {
+  color: var(--clr-accent);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-300);
+}
+
+.span-name:hover {
+  cursor: pointer;
+  color: var(--clr-text-eth);
+}
+
+.section-profile {
+  color: var(--clr-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-top: .5em;
+  padding-bottom: 2em;
+  padding-right: 1em;
+
+  border: 0px solid;
+}
+
+.image-profile {
+  max-height: 2em;
+  max-width: 2em;
+  border: 1px solid var(--clr-accent);
+  border-radius: 1em;
+}
+
+#p-no-padding {
+  padding: 0;
+}
+
+
+h1:hover {
+  color: var(--clr-text-eth);
+  cursor: pointer;
+}
+
+.image-ntf:hover {
+  
+  mix-blend-mode: overlay;
+  cursor: pointer;
+}
+
+hr {
+  width: 85%;
+  height: 1px;
+  border: none;
+
+  opacity: 50%;
+  margin-top: 1em;
+  margin-left: 1.5em;
+  padding-right: 1.5em;
+  color: var(--clr-text);
+  background-color: var(--clr-text);
+}
+
+.icon-view {
+  position: absolute;
+  top: 7em;
+  right: 7.5em;
+  opacity: 100%;
+
+  transition: .5s;
+}
+
+.overlay {
+  position: fixed;
+  display: block;
+  background-color: aqua;
+  width: 18em;
+  height: 18em;
+  opacity: 0%;
+  border-radius: 1em;
+
+  top: 14.5em;
+  
+  transition: .5s;
+}
+
+.overlay:hover {
+  opacity: 40%;
+}
+
+.overlay:hover .icon-view{
+  opacity: 1;
 }

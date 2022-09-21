@@ -6,28 +6,39 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | QR code component</title>
+  
+  <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<main>
+  <div>
+    <section class="overlay"><img class="icon-view" src="images/icon-view.svg" alt="icon-view"></section>
+    <section class="image-ntf">
+      <img src="images/image-equilibrium.jpg" alt="image-ntf">
+    </section>
+    
 
-  <main>
-    <div id="box">
+    <section class="section-text">
+      <h1>Equilibrium #3429</h1>
 
-      <img src="./images/image-qr-code.png" alt="qr-code" id="img">
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+    </section>
+    <section class="section-price">
+      <p class="p-ETH"><img src="/images/icon-ethereum.svg" alt="icon-ETH">0.041 ETH</p>
+      <p class="p-TIME"><img src="/images/icon-clock.svg" alt="icon-clock">3 days left</p>
+    </section>
 
-      <h1 class="big">Improve your front-end skills by building projects</h1>
-      <p class="small">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level </p>
-    </div>
-  </main>
-</body>
+    <hr>
+
+    <section class="section-profile">
+      <img class="image-profile" src="/images/image-avatar.png" alt="avatar">
+      <p id="p-no-padding">Creation of<span class="span-name"> Jules Wyvern</span></p>
+    </section>
+  </div>
+</main>
 </html>
