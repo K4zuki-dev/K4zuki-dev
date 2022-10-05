@@ -1,137 +1,97 @@
 :root {
-    --clr-main-font: hsl(218, 44%, 22%);
-    --clr-background: hsl(212, 45%, 89%);
-    --clr-text: hsl(220, 15%, 55%);
-    --clr-qr-background: hsl(0, 0%, 100%);
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 
-    --fs-main: 0.9375rem;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-    --ff-main: 'Outfit', sans-serif;
-
-    --fw-big: 700;
-    --fw-small: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-/* Remove default margin */
-* {
+body {
   margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  a:hover {
+    color: #747bff;
   }
-}
-
-body {
-    background-color: var(--clr-background);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-img {
-    border: 0 solid;
-    border-radius: 1em;
-}
-
-#box {
-    width: 20em;
-
-    border: 1px solid;
-    background-color: var(--clr-qr-background);
-
-    padding: 1em;
-    border-radius: 1em;
-    border-color: var(--clr-qr-background);
-
-}
-
-.big {
-    font-family: var(--ff-main);
-    font-weight: var(--fw-big);
-    color: var(--clr-main-font);
-
-    padding-top: .5em;
-    padding-bottom: .5em;
-    padding-left: 1em;
-    padding-right: 1em;
-
-    font-size: 1.3em;
-
-    text-align: center;
-}
-
-.small {
-    font-family: var(--ff-main);
-    font-weight: var(--fw-small);
-    color: var(--clr-text);
-    
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-
-    text-align: center;
-
-    font-size: var(--fs-main);
-}
-
-body {
-    overflow: hidden;
+  button {
+    background-color: #f9f9f9;
+  }
 }
