@@ -8,6 +8,8 @@ const scene2 = new THREE.Scene()
 
 const contain = document.getElementById("getSize")
 
+const div = document.getElementById("container")
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
@@ -32,6 +34,8 @@ function resize() {
 
   let width = contain.clientWidth;
   let height = contain.clientHeight;
+
+
   renderer.setSize(width, height);
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
@@ -107,9 +111,12 @@ const animObject = document.getElementById("start")
 const animObject1 = document.getElementById("start1")
 
 window.onload = function() {
-  setTimeout(animStart, 1100)
-  setTimeout(animStart1, 1000)
-  setTimeout(show, 500) 
+  setTimeout(animStart, 3000)
+  setTimeout(animStart1, 2900)
+  setTimeout(removeAnim, 3000)
+  setTimeout(show, 500, h1)
+  setTimeout(show, 600, h2) 
+  setTimeout(show, 700, h3)  
 }
 
 function animStart() {
@@ -120,13 +127,15 @@ function animStart1() {
   animObject1.classList.add("animation-start1")
 }
 
-animObject.addEventListener("animationend", function(){
-  animObject.remove()
-})
+function removeAnim() {
+  animObject1.addEventListener("animationend", function(){
+    animObject1.remove()
+  })
 
-// animObject1.addEventListener("animationend", function(){
-//   animObject1.remove()
-// })
+  animObject.addEventListener("animationend", function(){
+    animObject.remove()
+  })
+}
 
 const h1 = document.getElementById("start-text")
 const h2 = document.getElementById("start-text1")
@@ -140,10 +149,10 @@ textArray.forEach(function(x) {
   x.style.top = "3em"
 })
 
-function show() {
-  h1.classList.add("show")
+function show(line) {
+  line.classList.add("show")
+  line.addEventListener("animationend", function() {
+    line.style.top = "0em"
+  })
 }
 
-h1.addEventListener("animationend", fucntion() {
-  
-})
