@@ -2,8 +2,10 @@ import * as THREE from "./three/build/three.module.js"
 
 const  scene = new THREE.Scene();
 
-const width = document.getElementById("container").clientWidth
-const height = document.getElementById("container").clientHeight
+const div = document.getElementById("container")
+
+const width = div.clientWidth
+const height = div.clientHeight
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
