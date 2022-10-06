@@ -33,7 +33,7 @@ scene.add(pointLight)
 scene.add(torus)
 
 function animate() {
-  torus.rotation.y += 1000
+  torus.rotation.y += 0.05
    
 
     requestAnimationFrame(animate)
