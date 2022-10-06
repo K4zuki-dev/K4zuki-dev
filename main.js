@@ -26,7 +26,7 @@ const lightHelper1 = new THREE.PointLightHelper(pointLight1)
 const lightHelper = new THREE.PointLightHelper(pointLight)
 
 
-
+scene.add(pointLight1)
 scene.add(lightHelper)
 scene.add(lightHelper1)
 scene.add(pointLight)
