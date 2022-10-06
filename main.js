@@ -17,13 +17,18 @@ const material = new THREE.MeshStandardMaterial({ color: 0xFF6347});
 const torus = new THREE.Mesh(geometry, material);
 
 const pointLight = new THREE.PointLight(0xffffff)
+const pointLight1 = new THREE.PointLight(0xffffff)
+
+pointLight1.position.set(0, -10, -10)
 pointLight.position.set(0, -0, 20)
 
+const lightHelper1 = new THREE.PointLighterHelper(pointLight1)
 const lightHelper = new THREE.PointLightHelper(pointLight)
 
 
 
 scene.add(lightHelper)
+scene.add(lightHelper1)
 scene.add(pointLight)
 scene.add(torus)
 
