@@ -12,7 +12,7 @@ const renderer = new THREE.WebGL1Renderer({
 })
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(width, height);
 camera.position.setZ(30);
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
