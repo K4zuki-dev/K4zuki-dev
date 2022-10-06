@@ -20,7 +20,7 @@ const pointLight = new THREE.PointLight(0xffffff)
 const pointLight1 = new THREE.PointLight(0xffffff)
 
 pointLight1.position.set(0, -10, -10)
-pointLight.position.set(0, -0, 20)
+pointLight.position.set(10, 0, 20)
 
 const lightHelper1 = new THREE.PointLightHelper(pointLight1)
 const lightHelper = new THREE.PointLightHelper(pointLight)
