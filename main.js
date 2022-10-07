@@ -2,6 +2,10 @@ import * as THREE from "./three/build/three.module.js"
 
 import { OrbitControls } from "./three/examples/jsm/controls/OrbitControls.js"
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 const body = document.body
 
 const scene = new THREE.Scene();
@@ -179,3 +183,7 @@ body.onscroll = function() {
     }
   });
 }
+
+
+const windowHeight = window.innerHeight
+title.style.height = windowHeight + "px"
