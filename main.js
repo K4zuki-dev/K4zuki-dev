@@ -100,14 +100,16 @@ function addScene(scene, obj1, obj2, obj3) {
 
 
 function animate() {
-    torus.rotation.y += .005
-    torus1.rotation.y -= .005
-    torus2.rotation.y += .005
+  const first = document.querySelector("#first")
 
-    requestAnimationFrame(animate)
-    renderer.render(scene, camera)
-    renderer1.render(scene1, camera1)
-    renderer2.render(scene2, camera2)
+  torus.rotation.y += .005
+  torus1.rotation.y -= .005
+  torus2.rotation.y += .005
+
+  requestAnimationFrame(animate)
+  renderer.render(scene, camera)
+  renderer1.render(scene1, camera1)
+  renderer2.render(scene2, camera2)
 }
 
 animate()
