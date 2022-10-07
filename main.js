@@ -1,6 +1,6 @@
 import * as THREE from "./three/build/three.module.js"
 
-import { OrbitControls } from "./three/examples/jsm/controls/OrbitControls.js"
+// import { OrbitControls } from "./three/examples/jsm/controls/OrbitControls.js"
 
 const scene = new THREE.Scene();
 const scene1 = new THREE.Scene();
@@ -76,9 +76,9 @@ const lightHelper = new THREE.PointLightHelper(pointLight);
 const lightHelper1 = new THREE.PointLightHelper(pointLight1)
 const lightHelper2 = new THREE.PointLightHelper(pointLight2)
 
-const controls = new OrbitControls(camera, renderer.domElement);
-const controls1 = new OrbitControls(camera1, renderer1.domElement)
-const controls2 = new OrbitControls(camera2, renderer2.domElement)
+//const controls = new OrbitControls(camera, renderer.domElement);
+//const controls1 = new OrbitControls(camera1, renderer1.domElement)
+//const controls2 = new OrbitControls(camera2, renderer2.domElement)
 
 scene.add(lightHelper);
 scene.add(pointLight);
