@@ -113,6 +113,7 @@ canvas {
 
 .hide {
   position: relative;
+  top: 3em;
 }
 
 .show {
