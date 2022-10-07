@@ -189,3 +189,4 @@ body.onscroll = function() {
 
 const windowHeight = window.innerHeight
 title.style.height = windowHeight + "px"
+title.style.fontSize = "3em"

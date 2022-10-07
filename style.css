@@ -5,6 +5,8 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: hidden;
+
+  
 }
 
 main {
@@ -24,7 +26,7 @@ main {
 
 .building-flex {
   display: flex;
-  margin-bottom: 5em;
+  margin-bottom: 30em;
 }
 
 #model-fit {
