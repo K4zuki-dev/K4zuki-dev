@@ -6,6 +6,8 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
+
+
 const body = document.body
 
 const scene = new THREE.Scene();
