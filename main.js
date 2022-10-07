@@ -22,6 +22,10 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHei
 const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
+const first = document.querySelector("#first")
+const second = document.querySelector("#second")
+const third = document.querySelector("#third")
+
 const renderer = new THREE.WebGL1Renderer({
   canvas: document.querySelector("#first")
 });
@@ -98,13 +102,29 @@ function addScene(scene, obj1, obj2, obj3) {
   scene.add(obj3)
 }
 
+let bool = true
+
+function changeBool(obj) {
+  obj.addEventListener("pointerenter", function() {
+    bool = false
+  })
+  
+  obj.addEventListener("pointerleave", function() {
+    bool = true
+  })
+  
+}
+
+changeBool(first)
+changeBool(second)
+changeBool(third)
 
 function animate() {
-  const first = document.querySelector("#first")
-
-  torus.rotation.y += .005
-  torus1.rotation.y -= .005
-  torus2.rotation.y += .005
+  if (bool) {
+    torus.rotation.y += .005
+    torus1.rotation.y -= .005
+    torus2.rotation.y += .005
+  }
 
   requestAnimationFrame(animate)
   renderer.render(scene, camera)
