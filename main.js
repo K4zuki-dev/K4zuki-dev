@@ -1,6 +1,8 @@
 import * as THREE from "./three/build/three.module.js"
 
-// import { OrbitControls } from "./three/examples/jsm/controls/OrbitControls.js"
+import { OrbitControls } from "./three/examples/jsm/controls/OrbitControls.js"
+
+const body = document.body
 
 const scene = new THREE.Scene();
 const scene1 = new THREE.Scene();
@@ -76,21 +78,19 @@ const lightHelper = new THREE.PointLightHelper(pointLight);
 const lightHelper1 = new THREE.PointLightHelper(pointLight1)
 const lightHelper2 = new THREE.PointLightHelper(pointLight2)
 
-//const controls = new OrbitControls(camera, renderer.domElement);
-//const controls1 = new OrbitControls(camera1, renderer1.domElement)
-//const controls2 = new OrbitControls(camera2, renderer2.domElement)
+const controls = new OrbitControls(camera, renderer.domElement);
+const controls1 = new OrbitControls(camera1, renderer1.domElement)
+const controls2 = new OrbitControls(camera2, renderer2.domElement)
 
-scene.add(lightHelper);
-scene.add(pointLight);
-scene.add(torus);
+addScene(scene, lightHelper, pointLight, torus)
+addScene(scene1, lightHelper1, pointLight1, torus1)
+addScene(scene2, lightHelper2, pointLight2, torus2)
 
-scene1.add(torus1)
-scene1.add(pointLight1)
-scene1.add(lightHelper1)
-
-scene2.add(torus2)
-scene2.add(pointLight2)
-scene2.add(lightHelper2)
+function addScene(scene, obj1, obj2, obj3) {
+  scene.add(obj1)
+  scene.add(obj2)
+  scene.add(obj3)
+}
 
 
 function animate() {
@@ -135,6 +135,11 @@ function removeAnim() {
   animObject.addEventListener("animationend", function(){
     animObject.remove()
   })
+
+  body.style.overflowY = "scroll"
+  
+  const title = document.getElementById("title")
+  title.classList.add("active")
 }
 
 const h1 = document.getElementById("start-text")
@@ -156,3 +161,21 @@ function show(line) {
   })
 }
 
+
+body.addEventListener("scroll", function(){
+  console.log("Test");
+})
+
+body.onscroll = function() {
+  const reveal = document.getElementsByClassName("not-active")
+  
+ 
+
+  Array.from(reveal).forEach(function(x, index) {
+    const top = reveal[index].getBoundingClientRect().top
+
+    if (top < window.innerHeight) {
+      x.classList.add("active")
+    }
+  });
+}
