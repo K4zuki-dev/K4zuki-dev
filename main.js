@@ -1,6 +1,6 @@
-import * as THREE from "./three/build/three.module.js"
+import  * as THREE from "https://unpkg.com/three@0.138.0/build/three.module.js"
+import { OrbitControls } from "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
 
-import { OrbitControls } from "./three/examples/jsm/controls/OrbitControls.js"
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
