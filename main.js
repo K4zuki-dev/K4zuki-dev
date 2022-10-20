@@ -1,5 +1,5 @@
 import  * as THREE from "https://unpkg.com/three@0.138.0/build/three.module.js"
-import { OrbitControls } from "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
+import {OrbitControls} from "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
 
 
 window.onbeforeunload = function () {
@@ -135,44 +135,48 @@ function animate() {
 animate()
 resize()
 
-const animObject = document.getElementById("start")
-const animObject1 = document.getElementById("start1")
+// Starting animation:
 
-window.onload = function() {
-  setTimeout(animStart, 3000)
-  setTimeout(animStart1, 2900)
-  setTimeout(removeAnim, 3000)
-  setTimeout(show, 500, h1)
-  setTimeout(show, 600, h2) 
-  setTimeout(show, 700, h3)  
-}
+// const animObject = document.getElementById("start")
+// const animObject1 = document.getElementById("start1")
 
-function animStart() {
-  animObject.classList.add("animation-start1")
-}
+// const h1 = document.getElementById("start-text")
+// const h2 = document.getElementById("start-text1")
+// const h3 = document.getElementById("start-text2")
 
-function animStart1() {
-  animObject1.classList.add("animation-start1")
-}
+// window.onload = function() {
+//   setTimeout(animStart, 3000)
+//   setTimeout(animStart1, 2900)
+//   setTimeout(removeAnim, 3000)
+//   setTimeout(show, 500, h1)
+//   setTimeout(show, 600, h2) 
+//   setTimeout(show, 700, h3)  
+// }
 
-function removeAnim() {
-  animObject1.addEventListener("animationend", function(){
-    animObject1.remove()
-  })
+// function animStart() {
+//   animObject.classList.add("animation-start1")
+// }
 
-  animObject.addEventListener("animationend", function(){
-    animObject.remove()
-  })
+// function animStart1() {
+//   animObject1.classList.add("animation-start1")
+// }
 
-  body.style.overflowY = "scroll"
+// function removeAnim() {
+//   animObject1.addEventListener("animationend", function(){
+//     animObject1.remove()
+//   })
+
+//   animObject.addEventListener("animationend", function(){
+//     animObject.remove()
+//   })
+
+//   body.style.overflowY = "scroll"
   
-  const title = document.getElementById("title")
-  title.classList.add("active")
-}
+//   const title = document.getElementById("title")
+//   title.classList.add("active")
+// }
 
-const h1 = document.getElementById("start-text")
-const h2 = document.getElementById("start-text1")
-const h3 = document.getElementById("start-text2")
+
 
 
 let textArray = []
