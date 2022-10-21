@@ -1,3 +1,5 @@
+console.log("Test-before-Load")
+
 const body = document.body
 
 window.onbeforeunload = function () {
@@ -86,7 +88,7 @@ title.style.height = windowHeight + "px"
 title.style.fontSize = "3em"
 
 
-
+console.log("test-before-THREE");
 
 
 // THREE JS STUFF:
@@ -219,3 +221,5 @@ function animate() {
 
 animate()
 resize()
+
+console.log("test-after-THREE");
