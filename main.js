@@ -1,11 +1,95 @@
-import  * as THREE from "https://unpkg.com/three@0.138.0/build/three.module.js"
-import {OrbitControls} from "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
-
-
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
+
+// Starting animation:
+
+const animObject = document.getElementById("start")
+const animObject1 = document.getElementById("start1")
+
+const h1 = document.getElementById("start-text")
+const h2 = document.getElementById("start-text1")
+const h3 = document.getElementById("start-text2")
+
+window.onload = function() {
+  // setTimeout(animStart, 3000)
+  // setTimeout(animStart1, 2900)
+  setTimeout(removeAnim, 3000)
+  // setTimeout(show, 500, h1)
+  // setTimeout(show, 600, h2) 
+  // setTimeout(show, 700, h3)  
+}
+
+// function animStart() {
+//   animObject.classList.add("animation-start1")
+// }
+
+// function animStart1() {
+//   animObject1.classList.add("animation-start1")
+// }
+
+function removeAnim() {
+  // animObject1.addEventListener("animationend", function(){
+  //   animObject1.remove()
+  // })
+
+  // animObject.addEventListener("animationend", function(){
+  //   animObject.remove()
+  // })
+
+  body.style.overflowY = "scroll"
+  
+  const title = document.getElementById("title")
+  title.classList.add("active")
+}
+
+
+let textArray = []
+textArray  = document.querySelectorAll(".hide")
+
+textArray.forEach(function(x) {
+  x.style.top = "3em"
+})
+
+function show(line) {
+  line.classList.add("show")
+  line.addEventListener("animationend", function() {
+    line.style.top = "0em"
+  })
+}
+
+
+body.addEventListener("scroll", function(){
+  console.log("Test");
+})
+
+body.onscroll = function() {
+  const reveal = document.getElementsByClassName("not-active")
+  
+
+  Array.from(reveal).forEach(function(x, index) {
+    const top = reveal[index].getBoundingClientRect().top
+
+    if (top < window.innerHeight) {
+      x.classList.add("active")
+    }
+  });
+}
+
+
+const windowHeight = window.innerHeight
+title.style.height = windowHeight + "px"
+title.style.fontSize = "3em"
+
+
+
+
+
+// THREE JS STUFF:
+
+import  * as THREE from "https://unpkg.com/three@0.138.0/build/three.module.js"
+import {OrbitControls} from "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
 
 
 const body = document.body
@@ -134,84 +218,3 @@ function animate() {
 
 animate()
 resize()
-
-// Starting animation:
-
-const animObject = document.getElementById("start")
-const animObject1 = document.getElementById("start1")
-
-const h1 = document.getElementById("start-text")
-const h2 = document.getElementById("start-text1")
-const h3 = document.getElementById("start-text2")
-
-window.onload = function() {
-  // setTimeout(animStart, 3000)
-  // setTimeout(animStart1, 2900)
-  setTimeout(removeAnim, 3000)
-  // setTimeout(show, 500, h1)
-  // setTimeout(show, 600, h2) 
-  // setTimeout(show, 700, h3)  
-}
-
-// function animStart() {
-//   animObject.classList.add("animation-start1")
-// }
-
-// function animStart1() {
-//   animObject1.classList.add("animation-start1")
-// }
-
-function removeAnim() {
-  // animObject1.addEventListener("animationend", function(){
-  //   animObject1.remove()
-  // })
-
-  // animObject.addEventListener("animationend", function(){
-  //   animObject.remove()
-  // })
-
-  body.style.overflowY = "scroll"
-  
-  const title = document.getElementById("title")
-  title.classList.add("active")
-}
-
-
-
-
-let textArray = []
-textArray  = document.querySelectorAll(".hide")
-
-textArray.forEach(function(x) {
-  x.style.top = "3em"
-})
-
-function show(line) {
-  line.classList.add("show")
-  line.addEventListener("animationend", function() {
-    line.style.top = "0em"
-  })
-}
-
-
-body.addEventListener("scroll", function(){
-  console.log("Test");
-})
-
-body.onscroll = function() {
-  const reveal = document.getElementsByClassName("not-active")
-  
-
-  Array.from(reveal).forEach(function(x, index) {
-    const top = reveal[index].getBoundingClientRect().top
-
-    if (top < window.innerHeight) {
-      x.classList.add("active")
-    }
-  });
-}
-
-
-const windowHeight = window.innerHeight
-title.style.height = windowHeight + "px"
-title.style.fontSize = "3em"
