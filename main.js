@@ -75,6 +75,7 @@ body.onscroll = function() {
 
     if (top < window.innerHeight) {
       x.classList.add("active")
+      x.classList.remove("not-active")
     }
   });
 }
