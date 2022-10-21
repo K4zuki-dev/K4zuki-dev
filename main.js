@@ -1,3 +1,5 @@
+const body = document.body
+
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
@@ -91,8 +93,6 @@ title.style.fontSize = "3em"
 import  * as THREE from "https://unpkg.com/three@0.138.0/build/three.module.js"
 import {OrbitControls} from "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
 
-
-const body = document.body
 
 const scene = new THREE.Scene();
 const scene1 = new THREE.Scene();
