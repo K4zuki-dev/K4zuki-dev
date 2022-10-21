@@ -137,21 +137,21 @@ resize()
 
 // Starting animation:
 
-// const animObject = document.getElementById("start")
-// const animObject1 = document.getElementById("start1")
+const animObject = document.getElementById("start")
+const animObject1 = document.getElementById("start1")
 
-// const h1 = document.getElementById("start-text")
-// const h2 = document.getElementById("start-text1")
-// const h3 = document.getElementById("start-text2")
+const h1 = document.getElementById("start-text")
+const h2 = document.getElementById("start-text1")
+const h3 = document.getElementById("start-text2")
 
-// window.onload = function() {
-//   setTimeout(animStart, 3000)
-//   setTimeout(animStart1, 2900)
-//   setTimeout(removeAnim, 3000)
-//   setTimeout(show, 500, h1)
-//   setTimeout(show, 600, h2) 
-//   setTimeout(show, 700, h3)  
-// }
+window.onload = function() {
+  // setTimeout(animStart, 3000)
+  // setTimeout(animStart1, 2900)
+  setTimeout(removeAnim, 3000)
+  // setTimeout(show, 500, h1)
+  // setTimeout(show, 600, h2) 
+  // setTimeout(show, 700, h3)  
+}
 
 // function animStart() {
 //   animObject.classList.add("animation-start1")
@@ -161,20 +161,20 @@ resize()
 //   animObject1.classList.add("animation-start1")
 // }
 
-// function removeAnim() {
-//   animObject1.addEventListener("animationend", function(){
-//     animObject1.remove()
-//   })
+function removeAnim() {
+  // animObject1.addEventListener("animationend", function(){
+  //   animObject1.remove()
+  // })
 
-//   animObject.addEventListener("animationend", function(){
-//     animObject.remove()
-//   })
+  // animObject.addEventListener("animationend", function(){
+  //   animObject.remove()
+  // })
 
-//   body.style.overflowY = "scroll"
+  body.style.overflowY = "scroll"
   
-//   const title = document.getElementById("title")
-//   title.classList.add("active")
-// }
+  const title = document.getElementById("title")
+  title.classList.add("active")
+}
 
 
 
