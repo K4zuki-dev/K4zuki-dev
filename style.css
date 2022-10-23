@@ -19,14 +19,16 @@ main {
   border: 3px solid grey;
   border-radius: 5em;
   overflow: hidden;
+  margin-left: 3em;
 }
 
 .building-flex {
   display: flex;
   margin-bottom: 30em;
+  gap: 5em;
 }
 
-#model-fit {
+.model-fit {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
@@ -54,13 +56,18 @@ canvas {
 }
 
 .text {
-  padding: 3vw 5vw;
   display: flex;
   align-items: center;
 }
 
+#second {
+  margin-right: 5em;
+  margin-left: 0;
+}
+
 .switch {
   flex-direction: row-reverse;
+  gap: 5em;
 }
 
 #column {
@@ -94,6 +101,7 @@ canvas {
 
 .animation-start1 {
   animation: two 1s 1 ease;
+  -webkit-animation: two 1s 1 ease;
 }
 
 
@@ -132,6 +140,7 @@ canvas {
 .show {
   top: 0;
   animation: show .5s ease 1;
+  -webkit-animation: show .5s ease 1;
 }
 
 
@@ -187,11 +196,29 @@ h1 {
 @-webkit-keyframes onScroll {
   from {
     top: 3em;
-    opacity: 0;
+    -webkit-opacity: 0;
   }
 
   to {
     top: 0;
-    opacity: 1;
+    -webkit-opacity: 1;
+  }
+}
+
+@media (max-width: 1250px) {
+  .building-flex {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 5em;
+  }
+
+  .model-container {
+    margin: 0;
+    max-width: 80%;
+    height: 100%;
+
   }
 }

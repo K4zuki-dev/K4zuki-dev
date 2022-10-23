@@ -3,8 +3,10 @@ console.log("Test-before-Load")
 const body = document.body
 
 window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+  window.scroll(0, 0, 0, 0)
 }
+
+body.style.overflowY = "hidden"
 
 
 // Starting animation:
@@ -17,30 +19,30 @@ const h2 = document.getElementById("start-text1")
 const h3 = document.getElementById("start-text2")
 
 window.onload = function() {
-  // setTimeout(animStart, 3000)
-  // setTimeout(animStart1, 2900)
+  setTimeout(animStart, 3000)
+  setTimeout(animStart1, 2900)
   setTimeout(removeAnim, 3000)
-  // setTimeout(show, 500, h1)
-  // setTimeout(show, 600, h2) 
-  // setTimeout(show, 700, h3)  
+  setTimeout(show, 500, h1)
+  setTimeout(show, 600, h2) 
+  setTimeout(show, 700, h3) 
 }
 
-// function animStart() {
-//   animObject.classList.add("animation-start1")
-// }
+function animStart() {
+  animObject.classList.add("animation-start1")
+}
 
-// function animStart1() {
-//   animObject1.classList.add("animation-start1")
-// }
+function animStart1() {
+  animObject1.classList.add("animation-start1")
+}
 
 function removeAnim() {
-  // animObject1.addEventListener("animationend", function(){
-  //   animObject1.remove()
-  // })
+  animObject1.addEventListener("animationend", function(){
+    animObject1.remove()
+  })
 
-  // animObject.addEventListener("animationend", function(){
-  //   animObject.remove()
-  // })
+  animObject.addEventListener("animationend", function(){
+    animObject.remove()
+  })
 
   body.style.overflowY = "scroll"
   
@@ -63,11 +65,6 @@ function show(line) {
   })
 }
 
-
-body.addEventListener("scroll", function(){
-  console.log("Test");
-})
-
 body.onscroll = function() {
   const reveal = document.getElementsByClassName("not-active")
   
@@ -75,7 +72,7 @@ body.onscroll = function() {
   Array.from(reveal).forEach(function(x, index) {
     const top = reveal[index].getBoundingClientRect().top
 
-    if (top < window.innerHeight) {
+    if (top + 400 < window.innerHeight) {
       x.classList.add("active")
     }
   });
@@ -112,16 +109,17 @@ console.log("test-before-THREE");
 // const second = document.querySelector("#second")
 // const third = document.querySelector("#third")
 
-// const renderer = new THREE.WebGL1Renderer({
-//   canvas: document.querySelector("#first")
+// const renderer = new THREE.WebGLRenderer({
+//   canvas: document.querySelector("#first"),
+//   antialias: true
 // });
 
-// const renderer1 = new THREE.WebGL1Renderer({
+// const renderer1 = new THREE.WebGLRenderer({
 //   canvas: document.querySelector("#second"),
 //   antialias: true
 // });
 
-// const renderer2 = new THREE.WebGL1Renderer({
+// const renderer2 = new THREE.WebGLRenderer({
 //   canvas: document.querySelector("#third"),
 //   antialias: true
 // })
