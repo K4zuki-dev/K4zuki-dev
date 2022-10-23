@@ -99,6 +99,7 @@ canvas {
   align-items: center;
 }
 
+
 .animation-start1 {
   animation: two 1s 1 ease;
   -webkit-animation: two 1s 1 ease;
@@ -205,6 +206,17 @@ h1 {
     -webkit-opacity: 1;
   }
 }
+
+#start-text {
+  height: 100%;
+}
+#start-text1 {
+  height: 100%;
+}
+#start-text2 {
+  height: 100%;
+}
+
 
 @media (max-width: 1000px) {
   .building-flex {
