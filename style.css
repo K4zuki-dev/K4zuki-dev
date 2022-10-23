@@ -206,7 +206,7 @@ h1 {
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1000px) {
   .building-flex {
     flex-direction: column;
     display: flex;
@@ -221,5 +221,14 @@ h1 {
     max-width: 80%;
     height: 100%;
 
+  }
+
+  #column {
+    gap: 30em;
+  }
+
+  .text {
+    padding-left: 15em;
+    padding-right: 15em;
   }
 }
