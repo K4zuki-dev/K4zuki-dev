@@ -116,10 +116,10 @@ canvas {
 
 @-webkit-keyframes two {
   0% {
-    height: 100%;
+    -webkit-height: 100%;
   }
   100% {
-    height: 0;
+    -webkit-height: 0;
   }
 }
 
@@ -135,6 +135,7 @@ canvas {
 .hide {
   position: relative;
   top: 3em;
+  opacity: 1;
 }
 
 .show {
@@ -160,11 +161,11 @@ h1 {
 
 @-webkit-keyframes show {
   from {
-    top: 3em;
+    -webkit-top: 3em;
   }
 
   to {
-   top: 0;
+    -webkit-top: 0;
   }
 }
 
@@ -195,12 +196,12 @@ h1 {
 
 @-webkit-keyframes onScroll {
   from {
-    top: 3em;
+    -webkit-top: 3em;
     -webkit-opacity: 0;
   }
 
   to {
-    top: 0;
+    -webkit-top: 0;
     -webkit-opacity: 1;
   }
 }
