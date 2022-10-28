@@ -89,8 +89,8 @@ console.log("test-before-THREE");
 
 // THREE JS STUFF:
 
-import * as THREE from "./Build/three.module"
-import {OrbitControls} from "./Build/OrbitControls"
+import * as THREE from "./Build/three.module.js"
+import {OrbitControls} from "./Build/OrbitControls.js"
 
 
 const scene = new THREE.Scene();
