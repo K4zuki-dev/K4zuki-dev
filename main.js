@@ -90,23 +90,23 @@ console.log("test-before-THREE");
 
 // THREE JS STUFF:
 
-import * as THREE from './three/build/three.module.js';
-import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
+// import * as THREE from './three/build/three.module.js';
+// import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 
-console.log(THREE, OrbitControls);
+// console.log(THREE, OrbitControls);
 
 
-const scene = new THREE.Scene();
-const scene1 = new THREE.Scene();
-const scene2 = new THREE.Scene()
+// const scene = new THREE.Scene();
+// const scene1 = new THREE.Scene();
+// const scene2 = new THREE.Scene()
 
-const contain = document.getElementById("getSize")
+// const contain = document.getElementById("getSize")
 
-const div = document.getElementById("container")
+// const div = document.getElementById("container")
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+// const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+// const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+// const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
 // const first = document.querySelector("#first")
 // const second = document.querySelector("#second")
