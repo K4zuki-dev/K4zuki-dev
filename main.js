@@ -90,7 +90,7 @@ console.log("test-before-THREE");
 // THREE JS STUFF:
 
 import * as THREE from './three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 
 console.log(THREE, OrbitControls);
 
