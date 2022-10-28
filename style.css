@@ -116,6 +116,7 @@ main {
   border-radius: 5em;
   overflow: hidden;
   margin-left: 3em;
+  transform: translate3d(0,0,0);
 }
 
 .building-flex {
