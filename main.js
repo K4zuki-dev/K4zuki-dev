@@ -6,7 +6,7 @@ const body = document.body
 //   window.scroll(0, 0, 0, 0)
 // }
 
-// body.style.overflowY = "hidden"
+body.style.overflowY = "hidden"
 
 
 // Starting animation:
@@ -19,13 +19,13 @@ const h2 = document.getElementById("start-text1")
 const h3 = document.getElementById("start-text2")
 
 window.onload = function() {
-  setTimeout(show, 500, h1)
-  setTimeout(show, 600, h2) 
-  setTimeout(show, 700, h3) 
+  // setTimeout(show, 500, h1)
+  // setTimeout(show, 600, h2) 
+  // setTimeout(show, 700, h3) 
 
   setTimeout(animStart, 3000)
   setTimeout(animStart1, 2900)
-  setTimeout(removeAnim, 3000)
+  setTimeout(removeAnim,   3000)
 }
 
 function show(line) {

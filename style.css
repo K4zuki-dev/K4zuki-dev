@@ -78,6 +78,13 @@ select {
   --ff-normal:'Abel', sans-serif;
 }
 
+body {
+  position:relative;
+  overflow:hidden;
+  height: 100%;
+}
+
+
 
 #start1, #title {
   top: 0;
