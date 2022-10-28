@@ -2,11 +2,11 @@ console.log("Test-before-Load")
 
 const body = document.body
 
-window.onbeforeunload = function () {
-  window.scroll(0, 0, 0, 0)
-}
+// window.onbeforeunload = function () {
+//   window.scroll(0, 0, 0, 0)
+// }
 
-body.style.overflowY = "hidden"
+// body.style.overflowY = "hidden"
 
 
 // Starting animation:
