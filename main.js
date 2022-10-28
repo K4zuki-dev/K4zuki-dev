@@ -19,12 +19,20 @@ const h2 = document.getElementById("start-text1")
 const h3 = document.getElementById("start-text2")
 
 window.onload = function() {
-  setTimeout(animStart, 3000)
-  setTimeout(animStart1, 2900)
-  setTimeout(removeAnim, 3000)
   setTimeout(show, 500, h1)
   setTimeout(show, 600, h2) 
   setTimeout(show, 700, h3) 
+
+  setTimeout(animStart, 3000)
+  setTimeout(animStart1, 2900)
+  setTimeout(removeAnim, 3000)
+}
+
+function show(line) {
+  line.classList.add("show")
+  line.addEventListener("animationend", function() {
+    line.style.top = "0em"
+  })
 }
 
 function animStart() {
@@ -57,13 +65,6 @@ textArray  = document.querySelectorAll(".hide")
 textArray.forEach(function(x) {
   x.style.top = "3em"
 })
-
-function show(line) {
-  line.classList.add("show")
-  line.addEventListener("animationend", function() {
-    line.style.top = "0em"
-  })
-}
 
 body.onscroll = function() {
   const reveal = document.getElementsByClassName("not-active")
