@@ -89,8 +89,10 @@ console.log("test-before-THREE");
 
 // THREE JS STUFF:
 
-import * as THREE from "./Build/three.module"
-import {OrbitControls} from "./Build/OrbitControls"
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
+console.log(THREE, OrbitControls);
 
 
 const scene = new THREE.Scene();
@@ -202,6 +204,8 @@ function changeBool(obj) {
 changeBool(first)
 changeBool(second)
 changeBool(third)
+
+renderer.setClearColor (0x757876, 1)
 
 function animate() {
   if (bool) {
