@@ -85,6 +85,9 @@ body {
 }
 
 
+#start, #start1 {
+  z-index: 10;
+}
 
 #start1, #title {
   top: 0;
