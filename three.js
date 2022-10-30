@@ -1,6 +1,6 @@
 import * as THREE from 'https://threejs.org/build/three.module.js'; 
 import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
-import {GLTFLoader} from "./three/examples/jsm/loaders/GLTFLoader"
+import { GLTFLoader } from "./three/examples/jsm/loaders/GLTFLoader.js"
 
 console.log(THREE, OrbitControls);
 
