@@ -298,6 +298,10 @@ h1 {
   -webkit-animation: onScroll 1s ;
 }
 
+.title-container {
+  display: flex;
+}
+
 @keyframes onScroll {
   0% {
     top: 3em;
@@ -347,11 +351,19 @@ h1 {
     margin-bottom: 5em;
   }
 
+  .title-container {
+    text-align: center;
+    font-size: 10vw;
+  }
+
   .model-container {
     margin: 0;
-    max-width: 80%;
-    height: 100%;
+    width: 100%;
+    max-height: 40em;
+  }
 
+  canvas {
+    max-height: 10vh;
   }
 
   #column {
@@ -361,5 +373,11 @@ h1 {
   .text {
     padding-left: 15em;
     padding-right: 15em;
+    font-size: 4vw;
+    gap: 10em;
+  }
+
+  .model-fit {
+    object-fit: contain;
   }
 }
