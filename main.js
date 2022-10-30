@@ -23,9 +23,9 @@ window.onload = function() {
   // setTimeout(show, 600, h2) 
   // setTimeout(show, 700, h3) 
 
-  setTimeout(animStart, 3000)
-  setTimeout(animStart1, 2900)
-  setTimeout(removeAnim,   3000)
+  setTimeout(animStart, 100)
+  setTimeout(animStart1, 900)
+  setTimeout(removeAnim,   1000)
 }
 
 function show(line) {

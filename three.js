@@ -14,8 +14,6 @@ const contain = document.getElementById("getSize")
 const div = document.getElementById("container")
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
 const first = document.querySelector("#first")
 const second = document.querySelector("#second")
@@ -80,30 +78,22 @@ function cameraPos(cam) {
 }
 
 cameraPos(camera)
-cameraPos(camera1)
-cameraPos(camera2)
 
 const pointLight = new THREE.PointLight(0xffffff);
-const pointLight1 = new THREE.PointLight(0xffffff);
 const pointLight2 = new THREE.PointLight(0xffffff);
 
 pointLight.position.set(0, 30, 50)
-
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const lightHelper1 = new THREE.PointLightHelper(pointLight1)
-const lightHelper2 = new THREE.PointLightHelper(pointLight2)
+pointLight2.position.set(0, 30, -50)
 
 const controls = new OrbitControls(camera, renderer.domElement);
-// const controls1 = new OrbitControls(camera1, renderer1.domElement)
-// const controls2 = new OrbitControls(camera2, renderer2.domElement)
+// const controls1 = new OrbitControls(camera, renderer1.domElement)
+// const controls2 = new OrbitControls(camera, renderer2.domElement)
 
-addScene(scene, lightHelper, pointLight)
-addScene(scene1, lightHelper1, pointLight1 )
-addScene(scene2, lightHelper2, pointLight2 )
+addScene(scene, pointLight)
+addScene(scene, pointLight2 )
 
-function addScene(scene, obj1, obj2) {
-  scene.add(obj1)
-  scene.add(obj2)
+function addScene(scene, light) {
+  scene.add(light)
 }
 
 let bool = true

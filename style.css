@@ -82,6 +82,14 @@ body {
   position:relative;
   overflow:hidden;
   height: 100%;
+  display: block;
+
+  background-color: rgb(133, 133, 133);
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  font-family: var(--ff-normal);
 }
 
 
@@ -95,15 +103,6 @@ body {
   backface-visibility: hidden;
 }
 
-body {
-  background-color: rgb(133, 133, 133);
-  display: flex;
-  color: white;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-
-  font-family: var(--ff-normal);
-}
 
 main {
   display: flex;
@@ -113,7 +112,7 @@ main {
 }
 
 .model-container {
-  width: 100%;
+  width: 50%;
   height: 100%;
   border: 3px solid grey;
   border-radius: 5em;
@@ -158,7 +157,16 @@ canvas {
 
 .text {
   display: flex;
+  justify-content: center;
+  gap: 3em;
+  width: 50%;
+  font-size: 2em;
+}
+
+.erste-stichpunkte, .zweite-stichpunkte {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #second {
