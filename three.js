@@ -14,14 +14,24 @@ const contain = document.getElementById("getSize")
 const div = document.getElementById("container")
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+
 
 const first = document.querySelector("#first")
 const second = document.querySelector("#second")
 const third = document.querySelector("#third")
 
 var model
+var model1
+var model2
+var model3
+
+// GLTF Loaders:
 
 const loader = new GLTFLoader();
+const loader1 = new GLTFLoader();
+const loader2 = new GLTFLoader();
 
 loader.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
   model = gltf.scene
@@ -30,21 +40,35 @@ loader.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
   render()
 })
 
+loader1.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
+  model1 = gltf.scene
+
+  scene1.add(gltf.scene)
+  render()
+})
+
+
+
+
+// render for the 3d Objects:
+
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector("#first"),
   antialias: true
 });
 
-// const renderer1 = new THREE.WebGLRenderer({
-//   canvas: document.querySelector("#second"),
-//   antialias: true
-// });
+const renderer1 = new THREE.WebGLRenderer({
+  canvas: document.querySelector("#second"),
+  antialias: true
+});
 
 // const renderer2 = new THREE.WebGLRenderer({
 //   canvas: document.querySelector("#third"),
 //   antialias: true
 // })
 
+
+// Resizing function so that the proportions of the 3d Object to the canvas are correct
 
 function resize() {
   requestAnimationFrame(resize);
@@ -57,20 +81,18 @@ function resize() {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
 
-  // renderer1.setSize(width, height)
-  // camera1.aspect = width/height
-  // camera1.updateProjectionMatrix()
-
-  // renderer2.setSize(width, height)
-  // camera2.aspect = width/height
-  // camera2.updateProjectionMatrix()
+  renderer1.setSize(width, height)
+  camera1.aspect = width/height
+  camera1.updateProjectionMatrix()
 }
 
 
 // renderer.setPixelRatio(window.devicePixelRatio);
 // renderer.setSize(window.innerWidth, window.innerHeight);
 
-// Setting Camera position
+
+
+// Setting Camera position:
 
 function cameraPos(cam) {
   cam.position.setZ(30)
@@ -78,22 +100,53 @@ function cameraPos(cam) {
 }
 
 cameraPos(camera)
+cameraPos(camera1)
 
+
+// Lights
+
+
+// Light for first Obj:
 const pointLight = new THREE.PointLight(0xffffff);
-const pointLight2 = new THREE.PointLight(0xffffff);
-
+const pointLight1 = new THREE.PointLight(0xffffff);
 pointLight.position.set(0, 30, 50)
-pointLight2.position.set(0, 30, -50)
+pointLight1.position.set(0, 30, -50)
+
+// Light for second Obj:
+
+const pointLight2 = new THREE.PointLight(0xffffff);
+const pointLight3 = new THREE.PointLight(0xffffff);
+pointLight2.position.set(0, 30, 50)
+pointLight3.position.set(0, 30, -50)
+
+// Light for third Obj:
+
+const pointLight4 = new THREE.PointLight(0xffffff);
+const pointLight5 = new THREE.PointLight(0xffffff);
+pointLight4.position.set(0, 30, 50)
+pointLight5.position.set(0, 30, -50)
+
+// Light for fourth obj:
+
+const pointLight6 = new THREE.PointLight(0xffffff);
+const pointLight7 = new THREE.PointLight(0xffffff);
+pointLight6.position.set(0, 30, 50)
+pointLight7.position.set(0, 30, -50)
+
+// 
 
 const controls = new OrbitControls(camera, renderer.domElement);
-// const controls1 = new OrbitControls(camera, renderer1.domElement)
+const controls1 = new OrbitControls(camera1, renderer1.domElement)
 // const controls2 = new OrbitControls(camera, renderer2.domElement)
 
-addScene(scene, pointLight)
-addScene(scene, pointLight2 )
 
-function addScene(scene, light) {
+// Adding the lights to the scene
+addScene(scene, pointLight, pointLight1)
+addScene(scene1, pointLight2, pointLight3)
+
+function addScene(scene, light, light2) {
   scene.add(light)
+  scene.add(light2)
 }
 
 let bool = true
@@ -122,11 +175,20 @@ function render() {
     if(model) {
       model.rotation.y += 0.001
     }
+
+    if(model1) {
+      model1.rotation.y += 0.001
+    }
+
+    if(model2) {
+      model2.rotation.y += 0.001
+    }
+
   }
 
   requestAnimationFrame(render)
   renderer.render(scene, camera)
-  // renderer1.render(scene1, camera1)
+  renderer1.render(scene1, camera1)
   // renderer2.render(scene2, camera2)
 }
 
