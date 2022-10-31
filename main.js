@@ -23,7 +23,7 @@ window.onload = function() {
   // setTimeout(show, 600, h2) 
   // setTimeout(show, 700, h3) 
 
-  setTimeout(animStart, 100)
+  setTimeout(animStart, 1000)
   setTimeout(animStart1, 900)
   setTimeout(removeAnim,   1000)
 }
