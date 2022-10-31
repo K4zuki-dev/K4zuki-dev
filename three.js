@@ -21,11 +21,23 @@ const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHe
 const first = document.querySelector("#first")
 const second = document.querySelector("#second")
 const third = document.querySelector("#third")
+const fourth = document.querySelector("#fourth")
+const fifth = document.querySelector("#fifth")
+const sixth = document.querySelector("#sixth")
+const seventh = document.querySelector("#seventh")
+const eighth = document.querySelector("#eigth")
+const nineth = document.querySelector("#nineth")
 
 var model
 var model1
 var model2
 var model3
+var model4
+var model5
+var model6
+var model7
+var model8
+var model9
 
 // GLTF Loaders:
 
