@@ -93,10 +93,6 @@ body {
   font-family: var(--ff-normal);
 }
 
-.erste-stichpunkte {
-  height: fit-content;
-}
-
 
 #start, #start1 {
   z-index: 10;
@@ -111,7 +107,7 @@ body {
 .flex-column {
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 0;
 }
 
 main {
@@ -135,8 +131,9 @@ main {
 .flex-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
-  height: 30em;
+  height: 100%;
 }
 
 .Title-of-building {
@@ -147,7 +144,8 @@ main {
 .building-flex {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30em;
+  height: fit-content;
+  margin-bottom: 20em;
   gap: 5em;
 }
 
@@ -180,7 +178,7 @@ canvas {
 
 .height {
   max-width: 100%;
-  height: 30rem;
+  height: fit-content;
 }
 
 .text {
@@ -188,7 +186,8 @@ canvas {
   justify-content: flex-start;
   gap: 3em;
   width: 50%;
-  font-size: 2em;
+  height: 100%;
+  font-size: 3vw;
 }
 
 .erste-stichpunkte, .zweite-stichpunkte {
@@ -197,7 +196,7 @@ canvas {
   flex-direction: column;
   text-align: start;
   font-size: 1.3vw;
-  height: 7.5em;
+  height: fit-content;
 }
 
 #second {
@@ -214,6 +213,7 @@ canvas {
   display: flex;
   flex-direction: column;
   width: 90%;
+  gap: 30em;
 }
 
 #start {
@@ -395,6 +395,7 @@ h1 {
 
 li {
   margin-bottom: 1em;
+  font-size: 1.8vw;
 }
 
 
