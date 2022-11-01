@@ -92,7 +92,7 @@ loader4.load("./3Dobj/Große Halle/GroßeHalle.gltf", function(gltf) {
 
 // Zeppelin:
 
-loader2.load("./3Dobj/zep/zeppelin.gltf", function(gltf) {
+loader2.load("./3Dobj/zep/Zeppelin.gltf", function(gltf) {
   model2 = gltf.scene
 
   scene2.add(gltf.scene)
