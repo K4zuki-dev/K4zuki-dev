@@ -74,7 +74,7 @@ loader.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
 
 // Führerbau am Königsplatz in München
 
-loader1.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
+loader1.load("./3Dobj/Führerbau München/Führerbau.gltf", function(gltf) {
   model1 = gltf.scene
 
   scene1.add(gltf.scene)
@@ -90,10 +90,19 @@ loader4.load("./3Dobj/Große Halle/GroßeHalle.gltf", function(gltf) {
   render()
 })
 
+// Zeppelin:
+
+loader2.load("./3Dobj/zep/zeppelin.gltf", function(gltf) {
+  model2 = gltf.scene
+
+  scene2.add(gltf.scene)
+  render()
+})
+
 
 // Olympia Stadion
 
-loader7.load("./3Dobj/OlympiaStadion/.gltf", function(gltf) {
+loader7.load("./3Dobj/OlympiaStadion/Olympia.gltf", function(gltf) {
   model7 = gltf.scene
 
   scene7.add(gltf.scene)
@@ -104,20 +113,23 @@ loader7.load("./3Dobj/OlympiaStadion/.gltf", function(gltf) {
 
 // render for the 3d Objects:
 
-const renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector("#first"),
-  antialias: true
-});
+// const renderer = new THREE.WebGLRenderer({
+//   canvas: document.querySelector("#first"),
+//   antialias: true
+// });
 
 const renderer1 = new THREE.WebGLRenderer({
   canvas: document.querySelector("#second"),
   antialias: true
 });
 
-// const renderer2 = new THREE.WebGLRenderer({
-//   canvas: document.querySelector("#third"),
-//   antialias: true
-// })
+const renderer2 = new THREE.WebGLRenderer({
+  canvas: document.querySelector("#third"),
+  antialias: true
+})
+
+
+
 
 
 const renderer4 = new THREE.WebGLRenderer({
@@ -141,13 +153,17 @@ function resize() {
   let height = contain.clientHeight;
 
 
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
+  // renderer.setSize(width, height);
+  // camera.aspect = width / height;
+  // camera.updateProjectionMatrix();
 
   renderer1.setSize(width, height)
   camera1.aspect = width/height
   camera1.updateProjectionMatrix()
+
+  renderer2.setSize(width, height)
+  camera2.aspect = width/height
+  camera2.updateProjectionMatrix()
 
   renderer4.setSize(width, height)
   camera4.aspect = width/height
@@ -172,20 +188,22 @@ function cameraPos(cam, z, y) {
   cam.position.setY(y)
 }
 
+
 cameraPos(camera, 30, 20)
-cameraPos(camera1, 30, 20)
+cameraPos(camera1, -100, 20)
+cameraPos(camera2, -500, 20)
 cameraPos(camera4, 400, 200)
-cameraPos(camera7, 500, 600)
+cameraPos(camera7, 200, 100)
 
 
 // Lights
 
 
 // Light for first Obj:
-const pointLight = new THREE.PointLight(0xffffff);
-const pointLight1 = new THREE.PointLight(0xffffff);
-const pointLight2 = new THREE.PointLight(0xffffff);
-const pointLight3 = new THREE.PointLight(0xffffff);
+const pointLight = new THREE.PointLight(0x828282);
+const pointLight1 = new THREE.PointLight(0x828282);
+const pointLight2 = new THREE.PointLight(0x828282);
+const pointLight3 = new THREE.PointLight(0x828282);
 
 pointLight.position.set(0, 100, 50)
 pointLight1.position.set(0, 100, -50)
@@ -194,18 +212,37 @@ pointLight3.position.set(-50, 100, 0)
 
 // Light for second Obj:
 
+const pointLight4 = new THREE.PointLight(0x828282);
+const pointLight5 = new THREE.PointLight(0x828282);
+const pointLight6 = new THREE.PointLight(0x828282);
+const pointLight7 = new THREE.PointLight(0x828282);
+
+pointLight4.position.set(0, 50, 350)
+pointLight5.position.set(0, 50, -350)
+pointLight6.position.set(350, 50, 0)
+pointLight7.position.set(-350, 50, 0)
+
 // Light for third Obj:
 
+const pointLight9 = new THREE.PointLight(0x828282);
+const pointLight10 = new THREE.PointLight(0x828282);
+const pointLight11 = new THREE.PointLight(0x828282);
+const pointLight12 = new THREE.PointLight(0x828282);
+
+pointLight9.position.set(0, 50, 350)
+pointLight10.position.set(0, 50, -350)
+pointLight11.position.set(350, 50, 0)
+pointLight12.position.set(-350, 50, 0)
 
 // Light for fourth obj:
 
 
 // Light for fith obj:
 
-const pointLight16 = new THREE.PointLight(0xffffff);
-const pointLight17 = new THREE.PointLight(0xffffff);
-const pointLight18 = new THREE.PointLight(0xffffff);
-const pointLight19 = new THREE.PointLight(0xffffff);
+const pointLight16 = new THREE.PointLight(0x828282);
+const pointLight17 = new THREE.PointLight(0x828282);
+const pointLight18 = new THREE.PointLight(0x828282);
+const pointLight19 = new THREE.PointLight(0x828282);
 pointLight16.position.set(0, 400, 350)
 pointLight17.position.set(0, 400, -350)
 pointLight18.position.set(350, 400, 0)
@@ -217,10 +254,10 @@ pointLight19.position.set(-350, 400, 0)
 
 // Light for eigth obj:
 
-const pointLight28 = new THREE.PointLight(0xffffff);
-const pointLight29 = new THREE.PointLight(0xffffff);
-const pointLight30 = new THREE.PointLight(0xffffff);
-const pointLight31 = new THREE.PointLight(0xffffff);
+const pointLight28 = new THREE.PointLight(0x828282);
+const pointLight29 = new THREE.PointLight(0x828282);
+const pointLight30 = new THREE.PointLight(0x828282);
+const pointLight31 = new THREE.PointLight(0x828282);
 pointLight28.position.set(0, 400, 350)
 pointLight29.position.set(0, 400, -350)
 pointLight30.position.set(350, 400, 0)
@@ -229,9 +266,9 @@ pointLight31.position.set(-350, 400, 0)
 // 
 
 
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 const controls1 = new OrbitControls(camera1, renderer1.domElement)
-// const controls2 = new OrbitControls(camera, renderer2.domElement)
+const controls2 = new OrbitControls(camera2, renderer2.domElement)
 //insert other controls here:
 
 const controls4 = new OrbitControls(camera4, renderer4.domElement)
@@ -239,6 +276,8 @@ const controls7 = new OrbitControls(camera7, renderer7.domElement)
 
 // Adding the lights to the scene
 addScene(scene, pointLight, pointLight1, pointLight2, pointLight3)
+addScene(scene1, pointLight4, pointLight5, pointLight6, pointLight7)
+addScene(scene2, pointLight9, pointLight10, pointLight11, pointLight12)
 
 addScene(scene4, pointLight16, pointLight17, pointLight18, pointLight19)
 addScene(scene7, pointLight28, pointLight29, pointLight30, pointLight31)
@@ -263,10 +302,10 @@ function changeBool(obj) {
   
 }
 
-changeBool(first)
+// changeBool(first)
 changeBool(second)
 changeBool(third)
-changeBool(fourth)
+// changeBool(fourth)
 changeBool(fifth)
 changeBool(eighth)
 
@@ -292,11 +331,20 @@ function render() {
       model4.rotation.y += 0.001
     }
 
+    if(model2) {
+      model2.rotation.y +=0.00001
+    }
+
+    if(model7) {
+      model7.rotation.y +=0.0001
+    }
+
   }
 
   requestAnimationFrame(render)
-  renderer.render(scene, camera)
+  // renderer.render(scene, camera)
   renderer1.render(scene1, camera1)
+  renderer2.render(scene2, camera2)
   renderer4.render(scene4, camera4)
   renderer7.render(scene7, camera7)
   // renderer2.render(scene2, camera2)
