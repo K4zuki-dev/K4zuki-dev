@@ -65,12 +65,12 @@ const loader7 = new GLTFLoader();
 
 // Reichsbank
 
-loader.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
-  model = gltf.scene
+// loader.load("./3Dobj/Reichsbank/Reichsbank.gltf", function(gltf) {
+//   model = gltf.scene
 
-  scene.add(gltf.scene)
-  render()
-})
+//   scene.add(gltf.scene)
+//   render()
+// })
 
 // Führerbau am Königsplatz in München
 
